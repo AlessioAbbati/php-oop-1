@@ -26,15 +26,11 @@ $matrix = new movies('matrix', '1999', 'sci-fi', 'Keanu Reeves', 'the Wachowski 
 </head>
 <body>
     <div class="container">
-        <div class="movie">
-            <?php echo $alien->getFullInfo(); ?>
-        </div>
-        <div class="movie">
-            <?php echo $ironMan->getFullInfo(); ?>
-        </div>
-        <div class="movie">
-            <?php echo $matrix->getFullInfo(); ?>
-        </div>
+        <ul><?php
+            foreach ($arrMovies as $movies) { ?>
+				<li><?= $movies->title ?> - <?= $movies->pubblicationYear ?> - <?= $movies->genres ?> - <?= $movies->actors ?> - <?= $movies->directorName ?></li><?php
+			} ?>
+        </ul>
     </div>
 </body>
 </html>
