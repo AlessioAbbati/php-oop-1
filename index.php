@@ -5,8 +5,9 @@ include __DIR__ . '/genres.php';
 include __DIR__ . '/data.php';
 
 $alien = new movies('alien', '1979', 'horror/sci-fi', 'Sigourney Weawer', 'Ridley Scott');
+$ironMan = new movies('Iron Man', '2008', 'Marvel', 'Robert Downey Jr', 'Jon Favreau');
+$matrix = new movies('matrix', '1999', 'sci-fi', 'Keanu Reeves', 'the Wachowski sisters');
 
-echo $alien->getFullInfo();
 
 ?>
 
@@ -24,6 +25,16 @@ echo $alien->getFullInfo();
     crossorigin="anonymous" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="movie">
+            <?php echo $alien->getFullInfo(); ?>
+        </div>
+        <div class="movie">
+            <?php echo $ironMan->getFullInfo(); ?>
+        </div>
+        <div class="movie">
+            <?php echo $matrix->getFullInfo(); ?>
+        </div>
+    </div>
 </body>
 </html>
