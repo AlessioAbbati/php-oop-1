@@ -18,7 +18,8 @@ class movies {
 
     public function getFullInfo()
     {
-        return $this->title . ' ' . $this->pubblicationYear . ' ' . $this->genres . ' ' . $this->actors . ' ' . $this->directorName;
+        $genreString = implode(', ', $this->genres);
+        return $this->title . ' ' . $this->pubblicationYear . ' ' . $genreString . ' ' . $this->actors . ' ' . $this->directorName;
     }
 }
 

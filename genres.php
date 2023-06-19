@@ -8,4 +8,9 @@ class genres
     {
         $this->genre = $genre;
     }
+
+    public function __toString()
+    {
+        return $this->genre;
+    }
 }

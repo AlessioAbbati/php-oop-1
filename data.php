@@ -16,7 +16,9 @@ $arrMovies = [
         'alien',
         '1979',
         [
-            new genres($arrgenres[1])
+            new genres($arrgenres[1]),
+            new genres($arrgenres[2]),
+            new genres($arrgenres[3]),
         ],
         'Sigourney Weawer',
         'Ridley Scott',
@@ -25,7 +27,7 @@ $arrMovies = [
         'Iron Man',
         '2008',
         [
-            new genres($arrgenres[2])
+            new genres($arrgenres[2]),
         ],
         'Robert Downey Jr',
         'Jon Favreau',
@@ -34,7 +36,8 @@ $arrMovies = [
         'matrix',
         '1999',
         [
-            new genres($arrgenres[2])
+            new genres($arrgenres[2]),
+            new genres($arrgenres[4]),
         ],
         'Keanu Reeves',
         'the Wachowski sisters',
