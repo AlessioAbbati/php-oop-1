@@ -16,10 +16,10 @@ class movies {
 		
     }
 
-    public function getFullInfo()
-	{
-		return $this->title . ' ' . $this->pubblicationYear . ' ' . $this->genres . ' ' . $this->actors . ' ' . $this->directorName;
-	}
+    // public function getFullInfo()
+	// {
+	// 	return $this->title . ' ' . $this->pubblicationYear . ' ' . $this->genres . ' ' . $this->actors . ' ' . $this->directorName;
+	// }
 }
 
 
