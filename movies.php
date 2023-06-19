@@ -3,11 +3,11 @@
 class movies {
     public string $title;
     public int $pubblicationYear;
-    public string $genres;
+    public array $genres;
     public string $actors;
     public string $directorName;
 
-    public function __construct(string $title, int $pubblicationYear, string $genres = null, string $actors, string $directorName) {
+    public function __construct(string $title, int $pubblicationYear, array $genres, string $actors, string $directorName) {
         $this->title = $title;
 		$this->pubblicationYear = $pubblicationYear;
 		$this->genres = $genres;
@@ -16,10 +16,10 @@ class movies {
 		
     }
 
-    // public function getFullInfo()
-	// {
-	// 	return $this->title . ' ' . $this->pubblicationYear . ' ' . $this->genres . ' ' . $this->actors . ' ' . $this->directorName;
-	// }
+    public function getFullInfo()
+    {
+        return $this->title . ' ' . $this->pubblicationYear . ' ' . $this->genres . ' ' . $this->actors . ' ' . $this->directorName;
+    }
 }
 
 

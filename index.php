@@ -4,9 +4,9 @@ include __DIR__ . '/movies.php';
 include __DIR__ . '/genres.php';
 include __DIR__ . '/data.php';
 
-$alien = new movies('alien', '1979', 'horror/sci-fi', 'Sigourney Weawer', 'Ridley Scott');
-$ironMan = new movies('Iron Man', '2008', 'Marvel', 'Robert Downey Jr', 'Jon Favreau');
-$matrix = new movies('matrix', '1999', 'sci-fi', 'Keanu Reeves', 'the Wachowski sisters');
+// $alien = new movies('alien', '1979', 'horror/sci-fi', 'Sigourney Weawer', 'Ridley Scott');
+// $ironMan = new movies('Iron Man', '2008', 'Marvel', 'Robert Downey Jr', 'Jon Favreau');
+// $matrix = new movies('matrix', '1999', 'sci-fi', 'Keanu Reeves', 'the Wachowski sisters');
 
 
 ?>
@@ -26,9 +26,10 @@ $matrix = new movies('matrix', '1999', 'sci-fi', 'Keanu Reeves', 'the Wachowski 
 </head>
 <body>
     <div class="container">
+        <h1>Movies</h1>
         <ul><?php
             foreach ($arrMovies as $movies) { ?>
-				<li><?= $movies->title ?> - <?= $movies->pubblicationYear ?> - <?= $movies->genres ?> - <?= $movies->actors ?> - <?= $movies->directorName ?></li><?php
+				<li><?php echo $movies->getFullInfo() ?></li><?php
 			} ?>
         </ul>
     </div>
